@@ -62,12 +62,10 @@
 
 /* shared design */
 
-/* body {
-    width: 100vw;
-} */
 
 header,
-main {
+.banner,
+.card-section {
     max-width: 80%;
     margin: 0 auto;
 }
@@ -91,6 +89,18 @@ main {
     padding: 10px;
     border-radius: 12px;
     background: rgb(254, 163, 1);
+}
+
+.date {
+    background-color: var(--color-3);
+    width: 30%;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-size: 1.rem;
+    font-weight: 500;
+    font-family: "Raleway";
 }
 
 
@@ -175,7 +185,7 @@ nav>.buton>img {
     background: url('/assets/bg.png');
     background-position: 0px 0px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,7 +218,7 @@ nav>.buton>img {
     align-items: center;
     border: 0.94px solid rgb(241, 250, 253);
     box-shadow: 0px 0px 20px rgba(198, 198, 198, 0.288);
-    border-radius: 20px; 
+    border-radius: 20px;
 
 }
 
@@ -223,11 +233,13 @@ nav>.buton>img {
     font-size: 15.09px;
     font-weight: 500;
 }
-.card-section > .key{
+
+.card-section>.key {
     display: flex;
     gap: 10px;
 }
-.card-section > .key>div {
+
+.card-section>.key>div {
     text-align: center;
     width: 30px;
     font-size: 30px;
@@ -239,18 +251,138 @@ nav>.buton>img {
 }
 
 
+
+
+
+/* story section */
+.stories {
+    padding-top: 200px;
+    background: url('/assets/bg.png'), linear-gradient(0deg, rgba(255, 162, 1, 0.314) 5%, rgba(255, 255, 255, 0.867) 100%);
+    background-position-x: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stories>h1 {
+    font-size: 4.5rem;
+    margin-bottom: 80px;
+}
+
+.stories>.all-stories {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.stories>.all-stories>.all-small-cards {
+
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stories>.all-stories>.big-one {
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+
+
+.stories>.all-stories>.big-one>.img-date>img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.stories>.all-stories>.big-one>.img-date {
+    background-color: aliceblue;
+    position: relative;
+}
+
+.stories>.all-stories>.big-one>.img-date>.date {
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: -35px;
+    left: 45px;
+}
+
+.stories>.all-stories>.big-one>.content {
+    padding: 60px 38px 38px 38px;
+}
+
+.stories>.all-stories>.big-one>.content>.title {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.stories>.all-stories>.big-one>.content>p {
+    color: rgb(102, 102, 102);
+    font-family: "Raleway";
+    font-size: 1.15rem;
+    line-height: 28.76px;
+    font-weight: 500;
+}
+
+.stories>.all-stories>.all-small-cards>.small-card>.img-date>img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.stories>.all-stories>.all-small-cards>.small-card {
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.stories>.all-stories>.all-small-cards>.small-card>.img-date>p {
+    background-color: var(--color-5);
+    width: 60%;
+    height: 20px;
+    position: relative;
+    top: -30px;
+    left: 40px;
+}
+
+.stories>.all-stories>.all-small-cards>.small-card>.img-date>.exp {
+    background-color: var(--color-4);
+}
+
+.stories>.all-stories>.all-small-cards>.small-card>.content {
+    
+    padding: 40px 45px 55px 40px;
+}
+
+.stories>.all-stories>.all-small-cards>.small-card>.content>h2 {
+    font-size: 0.959rem;
+    font-weight: 700;
+}
+.stories > button {
+    width: 197px;
+    margin-top: 80px;
+    background-color: black;
+    color: aliceblue;
+}
+
 /* responsive design */
 
 @media screen and (max-width: 576px) {
+    
 
     header,
     main {
         max-width: 100%;
     }
 
-    main {
-        margin: 16px;
-    }
 
     header>nav {
         margin-top: 0;
@@ -304,17 +436,70 @@ nav>.buton>img {
         width: 100%;
         text-align: center;
     }
+   
 
     /* cards */
+    .card-section{
+        margin-bottom: 0px;
+    }
+    .card-section>.all-cards {
+        margin-bottom: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-    .card-section>.all-cards{
-        grid-template-columns: repeat(1,1fr);
+    .card-section>h1 {
+        margin-bottom: 20px;
+        font-size: 1.75rem;
     }
-    .card-section>h1{
-        font-size: 2rem;
-    }
-    .card-section > .key {
+
+    .card-section>.key {
         display: none;
     }
+
+
+    /* stories */
+    .stories{
+        padding: 15px;
+    }
+    .stories>h1{
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-size: 1.625rem;
+    }
+    .stories>.all-stories {
+        width: 100%;
+    }
+    
+    .stories>.all-stories>.big-one {
+        display: none;
+    }
+
+    .hide {
+        display: inline;
+    }
+    .stories>.all-stories {
+        display: block;
+        
+    }
+    .stories>.all-stories>.all-small-cards>.small-card>.content{
+        padding: 20px;
+        
+    }
+    .stories>.all-stories>.all-small-cards>.small-card>.content>h2{
+        font-size: 9.13px;
+        margin-top: -25px;
+    }
+    
+    .stories>.all-stories>.all-small-cards>.small-card>.img-date>p {
+        font-size: 9.13px;
+        width: 55%;
+        height: 5px;
+        text-align: center;
+        left: 10px;
+    }
+    .stories>button {
+        margin-top: 20px;
+    }
+    
 
 }
