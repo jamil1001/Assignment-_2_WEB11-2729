@@ -517,7 +517,9 @@ footer {
         margin-bottom: 20px;
         font-size: 1.75rem;
     }
-
+    .card-section>.all-cards> .card >h2{
+        font-size: 1.25rem;
+    }
     .card-section>.key {
         display: none;
     }
