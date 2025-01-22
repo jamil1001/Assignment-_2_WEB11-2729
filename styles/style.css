@@ -1,3 +1,5 @@
+
+/* font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -162,7 +164,6 @@ nav>.buton>img {
 
 .banner>.content>h1 {
     margin-bottom: 20px;
-    width: 50%;
     font-size: 3.5rem;
     font-weight: 700;
 }
@@ -254,8 +255,8 @@ nav>.buton>img {
 
 
 
-
 /* story section */
+
 .hide {
     display: none;
 }
@@ -377,12 +378,35 @@ nav>.buton>img {
 }
 
 
+
+marquee {
+    
+    padding-bottom: 20px;
+    background-color: rgb(1, 172, 253);
+}
+
+marquee>.marqu {
+    display: flex;
+}
+
+marquee>.marqu>img {
+    width: 50px;
+}
+
+marquee>.marqu>h1 {
+    color: aliceblue;
+}
+
+
+
 /* footer section */
 footer {
     background: var(--secondary-color);
-    padding-bottom: 176px;
+    padding-bottom: 20px;
 }
+
 .footer {
+    margin-bottom: 50px;
     padding-top: 124px;
     display: grid;
     grid-template-columns: 399px repeat(2, 1fr);
@@ -400,9 +424,11 @@ footer {
     font-weight: 700;
     line-height: 40px;
 }
+
 .footer>.logo-about>.logo>img {
     width: 70px;
 }
+
 .footer>.logo-about>.description {
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -410,13 +436,14 @@ footer {
 }
 
 
-.footer > .all-link > h2 {
+.footer>.all-link>h2 {
     color: white;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
 }
-.footer > .all-link > ul {
+
+.footer>.all-link>ul {
     color: white;
     font-size: 1.25rem;
     font-weight: 500;
@@ -425,14 +452,16 @@ footer {
     list-style: none;
     gap: 20px;
 }
-.footer >.all-icons > h2 {
+
+.footer>.all-icons>h2 {
     font-size: 26px;
     font-weight: 700;
     color: white;
     margin-bottom: 30px;
 
 }
-.footer >.all-icons > .icons {
+
+.footer>.all-icons>.icons {
     display: flex;
     gap: 10px;
 }
@@ -517,9 +546,11 @@ footer {
         margin-bottom: 20px;
         font-size: 1.75rem;
     }
-    .card-section>.all-cards> .card >h2{
+
+    .card-section>.all-cards>.card>h2 {
         font-size: 1.25rem;
     }
+
     .card-section>.key {
         display: none;
     }
